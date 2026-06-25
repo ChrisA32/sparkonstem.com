@@ -3,145 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SparkOn STEM</title>
-<link rel="stylesheet" href="styles.css">
+<title>SparkOn STEM | Home</title>
+<script>try{if(sessionStorage.getItem("sparkonPageTransition")==="1"){document.documentElement.classList.add("transition-preload");document.documentElement.style.background="#ffc45c";}}catch(e){}</script>
+<link rel="stylesheet" href="styles.css?v=32">
 </head>
-
 <body>
-
-<section class="sponsor-strip">
-STEM Kits • Youth Engineering • Community Outreach
-</section>
-
+<section class="sponsor-strip">Now serving Easton, Redding, Monroe, Newtown, Fairfield, Trumbull, and Weston</section>
 <header class="navbar">
-
-<div class="logo">
-SparkOn
-</div>
-
-<button id="menuBtn" class="menu-btn">
-☰
-</button>
-
+<a class="logo" href="index.html" aria-label="SparkOn home">
+<img src="sparkon-logo.png?v=2" alt="SparkOn" width="354" height="354">
+</a>
+<button id="menuBtn" class="menu-btn" aria-label="Open navigation">☰</button>
 <nav id="navMenu">
-<a href="#mission">Mission</a>
-<a href="#kits">Kits</a>
-<a href="#impact">Impact</a>
-<a href="#contact">Contact</a>
+<a class="active" href="index.html">Home</a>
+<a href="mission.html">Mission</a>
+<a href="kits.html">Kits</a>
+<a href="contact.html">Contact</a>
 </nav>
-
 </header>
 
+<main>
 <section class="hero">
-
 <div class="hero-content">
-
-<p class="eyebrow">
-SparkOn STEM
-</p>
-
-<h1>
-Small robots.<br>
-Big sparks.
-</h1>
-
-<p>
-SparkOn creates hands-on robot kits that introduce young students to engineering, circuits, motion, and problem solving.
-</p>
-
+<p class="eyebrow">Create • Explore • Engineer</p>
+<h1>Small robots.<br>Big sparks.</h1>
+<p>SparkOn creates hands-on robot kits that introduce young students to engineering, circuits, motion, and problem solving.</p>
 <div class="hero-buttons">
-<a class="btn primary" href="#kits">View Kits</a>
-<a class="btn secondary" href="#contact">Partner With Us</a>
+<a class="btn primary" href="kits.html">View Kits</a>
+<a class="btn secondary" href="contact.html">Partner With Us</a>
 </div>
-
 </div>
-
 </section>
 
-<section id="mission" class="grid-section">
-
-<div class="image-placeholder">
-YOUR IMAGE HERE
+<section class="home-intro">
+<p class="section-label">Hands-on learning</p>
+<h2>Engineering starts with a spark.</h2>
+<p>Explore our mission, discover our first robot kit, and learn how you can help make engineering more approachable for young students.</p>
+<div class="page-cards">
+<a class="page-card" href="mission.html"><span>01</span><h3>Our Mission</h3><p>Why we make engineering approachable, creative, and engaging.</p></a>
+<a class="page-card" href="kits.html"><span>02</span><h3>Explore Kits</h3><p>Meet the Bristle Bot and the concepts students learn while building it.</p></a>
+<a class="page-card" href="contact.html"><span>03</span><h3>Get Involved</h3><p>Request a kit, become a partner, or start a conversation.</p></a>
 </div>
-
-<div>
-<h2>Engineering Made Approachable</h2>
-
-<p>
-SparkOn provides STEM kits for ages 7-12 designed to make engineering approachable, creative, and engaging.
-</p>
-
-</div>
-
 </section>
 
-<section id="impact" class="stats">
-
-<div>
-<span data-count="50">0</span>
-<p>Kits Distributed</p>
-</div>
-
-<div>
-<span data-count="7">0</span>
-<p>Minimum Age</p>
-</div>
-
-<div>
-<span data-count="12">0</span>
-<p>Maximum Age</p>
-</div>
-
-<div>
-<span data-count="1">0</span>
-<p>Mission</p>
-</div>
-
+<section class="stats">
+<div><span data-count="50" data-suffix="+">0</span><p>Kits Distributed</p></div>
+<div><span data-count="3" data-suffix="+">0</span><p>Organization Partners</p></div>
+<div><span data-count="100" data-suffix="%">0</span><p>Community-Focused</p></div>
 </section>
-
-<section id="kits" class="main-section">
-
-<h2>Bristle Bot Kit</h2>
-
-<p>
-Build a simple robot while learning electricity, vibration, motion, friction, and engineering design.
-</p>
-
-<a class="btn primary" href="#contact">
-Request A Kit
-</a>
-
-</section>
-
-<section id="contact" class="contact-section">
-
-<h2>Contact SparkOn</h2>
-
-<form>
-
-<input type="text" placeholder="Name">
-
-<input type="email" placeholder="Email">
-
-<textarea placeholder="Message"></textarea>
-
-<button class="btn primary">
-Send Message
-</button>
-
-</form>
-
-</section>
+</main>
 
 <footer>
-
-<p>
-SparkOn STEM
-</p>
-
+<div class="footer-main">
+<div class="footer-brand">
+<a class="footer-logo-main" href="index.html" aria-label="SparkOn home"><img src="sparkon-footer-logo.png" alt="SparkOn" width="354" height="354"></a>
+</div>
+<div class="footer-column"><h3>Explore</h3><a href="index.html">Home</a><a href="mission.html">Mission</a><a href="kits.html">Kits</a><a href="contact.html">Contact</a></div>
+<div class="footer-column"><h3>Contact</h3><a href="mailto:contact@sparkonstem.com?subject=SparkOn%20STEM%20Inquiry">contact@sparkonstem.com</a><a href="tel:+12034008414">203-400-8414</a></div>
+<div class="footer-column"><h3>Connect</h3><a class="footer-social" href="https://www.linkedin.com/company/sparkonstem/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><span class="linkedin-icon" aria-hidden="true">in</span><span>LinkedIn</span></a></div>
+</div>
+<div class="footer-bottom"><span>© 2026 SparkOn STEM</span><span>Designed by Christopher Alvarado</span></div>
 </footer>
-
-<script src="script.js"></script>
-
+<script src="script.js?v=28"></script>
 </body>
 </html>
