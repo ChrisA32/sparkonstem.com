@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SparkOn STEM | Mission</title>
 <script>try{if(sessionStorage.getItem("sparkonPageTransition")==="1"){document.documentElement.classList.add("transition-preload");document.documentElement.style.background="#ffc45c";}}catch(e){}</script>
-<link rel="stylesheet" href="styles.css?v=32">
+<link rel="stylesheet" href="styles.css?v=48">
 </head>
 <body>
 <section class="sponsor-strip">Now serving Easton, Redding, Monroe, Newtown, Fairfield, Trumbull, and Weston</section>
@@ -13,18 +13,29 @@
 <a class="logo" href="index.html" aria-label="SparkOn home"><img src="sparkon-logo.png?v=2" alt="SparkOn" width="354" height="354"></a>
 <button id="menuBtn" class="menu-btn" aria-label="Open navigation">☰</button>
 <nav id="navMenu">
-<a href="index.html">Home</a><a class="active" href="mission.html">Mission</a><a href="kits.html">Kits</a><a href="contact.html">Contact</a>
+<a href="index.html">Home</a><a class="active" href="mission.html">Mission</a><div class="nav-dropdown"><a href="kits.html" aria-haspopup="true">Kits</a><div class="dropdown-menu" aria-label="Kit pages"><a href="kits.html">Bristle Bot</a><a href="solar-car.html">Solar Powered Car</a></div></div><a href="contact.html">Contact</a>
 </nav>
 </header>
 <main>
 <section class="page-hero">
 <p class="section-label">Our Mission</p>
-<h1>Engineering made approachable.</h1>
-<p>SparkOn provides STEM kits for ages 7–12 designed to make engineering approachable, creative, and engaging.</p>
+<h1>STEM that feels buildable.</h1>
+<p>SparkOn turns simple robot builds into hands-on projects students can assemble, observe, and understand.</p>
 </section>
 <section class="grid-section page-content">
-<div class="image-placeholder">YOUR IMAGE HERE</div>
-<div><h2>Curiosity becomes confidence.</h2><p>We introduce students to engineering through projects they can hold, build, test, and improve. Every SparkOn experience is designed to turn an abstract idea into a memorable moment of discovery.</p></div>
+<div><h2>Curiosity becomes confidence.</h2><p>Students learn by assembling something real and seeing how each part contributes to movement. The goal is to make engineering feel visible, approachable, and connected to something they can hold.</p></div>
+<div class="image-placeholder">Mission image coming soon</div>
+</section>
+<section class="founder-section">
+<div class="founder-photo" aria-label="Christopher Alvarado founder photo placeholder">Founder photo coming soon</div>
+<div class="founder-copy">
+<p class="section-label">Founder</p>
+<h2>Christopher Alvarado</h2>
+<p class="founder-title">Founder of SparkOn • Rising senior at Joel Barlow High School</p>
+<p>After moving across three different school districts, I noticed the same pattern in each place: students are curious about building and technology, but meaningful engineering opportunities are not always easy to find.</p>
+<p>As a robotics member at Joel Barlow High School, a rising senior, and a student living in Easton, CT, I wanted to create something practical, local, and expandable. SparkOn is my way of helping more students experience engineering through projects they can assemble, understand, and remember.</p>
+<p>My goal is to keep expanding SparkOn so more schools, organizations, and communities can give young learners an early spark for STEM.</p>
+</div>
 </section>
 </main>
 <footer>
@@ -36,6 +47,6 @@
 </div>
 <div class="footer-bottom"><span>© 2026 SparkOn STEM</span><span>Designed by Christopher Alvarado</span></div>
 </footer>
-<script src="script.js?v=28"></script>
+<script src="script.js?v=30"></script>
 </body>
 </html>

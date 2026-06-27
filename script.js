@@ -3,6 +3,7 @@ let counterObserver;
 let revealObserver;
 let revealItems=[];
 let isPageTransitioning=false;
+let isModalKeydownBound=false;
 
 const animateCounter=counter=>{
 const target=Number(counter.dataset.count);
@@ -61,13 +62,18 @@ const revealSelectors=[
 ".stats > div",
 ".page-hero > *",
 ".grid-section > *",
+".founder-section > *",
 ".kit-feature > *",
+".learning-section > *",
+".learning-grid article",
 ".video-feature > *",
 ".instructions-intro",
 ".instruction-step",
 ".support-section > *",
 ".contact-section form",
-".contact-section form > *"
+".contact-section form > *",
+".faq-section > *",
+".faq-list details"
 ];
 
 revealItems=[...new Set(document.querySelectorAll(revealSelectors.join(",")))];
@@ -82,11 +88,11 @@ revealItem(entry.target);
 revealItems.forEach(item=>{
 const parent=item.parentElement;
 const siblingIndex=parent?[...parent.children].indexOf(item):0;
-const staggerGroup=item.closest(".page-cards,.stats,.instruction-steps,form");
+const staggerGroup=item.closest(".page-cards,.stats,.instruction-steps,.learning-grid,form");
 const delay=staggerGroup?Math.min(siblingIndex,5)*140:0;
 item.classList.add("reveal");
 if(item.matches("main > section")) item.classList.add("reveal-section");
-else if(item.matches(".page-card,.stats > div,.instruction-step")) item.classList.add("reveal-pop");
+else if(item.matches(".page-card,.stats > div,.instruction-step,.learning-grid article")) item.classList.add("reveal-pop");
 else item.classList.add("reveal-child");
 item.style.setProperty("--reveal-delay",`${delay}ms`);
 revealObserver.observe(item);
@@ -129,11 +135,53 @@ window.location.href=`mailto:contact@sparkonstem.com?subject=${subject}&body=${b
 }
 };
 
+const initKitModal=()=>{
+const openButtons=document.querySelectorAll("[data-modal-open]");
+const closeButtons=document.querySelectorAll("[data-modal-close]");
+
+const closeModal=modal=>{
+if(!modal) return;
+modal.classList.remove("is-open");
+modal.setAttribute("aria-hidden","true");
+document.body.classList.remove("modal-open");
+};
+
+const openModal=modal=>{
+if(!modal) return;
+modal.classList.add("is-open");
+modal.setAttribute("aria-hidden","false");
+document.body.classList.add("modal-open");
+const closeButton=modal.querySelector("[data-modal-close]");
+if(closeButton) closeButton.focus();
+};
+
+openButtons.forEach(button=>{
+button.addEventListener("click",()=>{
+const modal=document.getElementById(button.dataset.modalOpen);
+openModal(modal);
+});
+});
+
+closeButtons.forEach(button=>{
+button.addEventListener("click",()=>{
+closeModal(button.closest(".kit-modal"));
+});
+});
+
+if(isModalKeydownBound) return;
+isModalKeydownBound=true;
+document.addEventListener("keydown",event=>{
+if(event.key!=="Escape") return;
+document.querySelectorAll(".kit-modal.is-open").forEach(closeModal);
+});
+};
+
 const initPage=()=>{
 initCounters();
 initReveals();
 initMenu();
 initContactForm();
+initKitModal();
 };
 
 const getTransitionFlag=()=>{

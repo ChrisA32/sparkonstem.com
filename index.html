@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SparkOn STEM | Home</title>
 <script>try{if(sessionStorage.getItem("sparkonPageTransition")==="1"){document.documentElement.classList.add("transition-preload");document.documentElement.style.background="#ffc45c";}}catch(e){}</script>
-<link rel="stylesheet" href="styles.css?v=32">
+<link rel="stylesheet" href="styles.css?v=48">
 </head>
 <body>
 <section class="sponsor-strip">Now serving Easton, Redding, Monroe, Newtown, Fairfield, Trumbull, and Weston</section>
@@ -17,7 +17,13 @@
 <nav id="navMenu">
 <a class="active" href="index.html">Home</a>
 <a href="mission.html">Mission</a>
-<a href="kits.html">Kits</a>
+<div class="nav-dropdown">
+<a href="kits.html" aria-haspopup="true">Kits</a>
+<div class="dropdown-menu" aria-label="Kit pages">
+<a href="kits.html">Bristle Bot</a>
+<a href="solar-car.html">Solar Powered Car</a>
+</div>
+</div>
 <a href="contact.html">Contact</a>
 </nav>
 </header>
@@ -27,7 +33,7 @@
 <div class="hero-content">
 <p class="eyebrow">Create • Explore • Engineer</p>
 <h1>Small robots.<br>Big sparks.</h1>
-<p>SparkOn creates hands-on robot kits that introduce young students to engineering, circuits, motion, and problem solving.</p>
+<p>SparkOn creates simple robot kits that help young students assemble a working prototype and see engineering ideas in action.</p>
 <div class="hero-buttons">
 <a class="btn primary" href="kits.html">View Kits</a>
 <a class="btn secondary" href="contact.html">Partner With Us</a>
@@ -37,13 +43,30 @@
 
 <section class="home-intro">
 <p class="section-label">Hands-on learning</p>
-<h2>Engineering starts with a spark.</h2>
-<p>Explore our mission, discover our first robot kit, and learn how you can help make engineering more approachable for young students.</p>
+<h2>Learning starts with assembly.</h2>
+<p>SparkOn helps students learn by following a real build process and seeing how small parts work together to create movement.</p>
 <div class="page-cards">
-<a class="page-card" href="mission.html"><span>01</span><h3>Our Mission</h3><p>Why we make engineering approachable, creative, and engaging.</p></a>
-<a class="page-card" href="kits.html"><span>02</span><h3>Explore Kits</h3><p>Meet the Bristle Bot and the concepts students learn while building it.</p></a>
-<a class="page-card" href="contact.html"><span>03</span><h3>Get Involved</h3><p>Request a kit, become a partner, or start a conversation.</p></a>
+<a class="page-card" href="mission.html"><span>01</span><h3>Mission</h3><p>Why SparkOn exists and who it is built to serve.</p></a>
+<a class="page-card" href="kits.html"><span>02</span><h3>Kits</h3><p>Explore the Bristle Bot and the ideas inside the build.</p></a>
+<a class="page-card" href="contact.html"><span>03</span><h3>Contact</h3><p>Request kits, partner locally, or help expand access.</p></a>
 </div>
+</section>
+
+<section class="home-support">
+<div>
+<p class="section-label">Support the next build</p>
+<h2>Help fund the next SparkOn kit.</h2>
+<p>Support helps cover the small parts that make the experience possible: motors, batteries, tools, and materials for student builds.</p>
+<div class="payment-trust" aria-label="Secure checkout through Stripe with major payment methods">
+<span class="stripe-secure"><span>Powered by</span><strong>stripe</strong></span>
+<span class="payment-logo"><img src="payment-visa-compact.png?v=1" alt="Visa"></span>
+<span class="payment-logo"><img class="mastercard-logo" src="payment-mastercard-real.png?v=1" alt="Mastercard"></span>
+<span class="payment-logo"><img src="payment-amex-compact.png?v=1" alt="American Express"></span>
+<span class="payment-logo"><img src="payment-apple-pay-compact.png?v=1" alt="Apple Pay"></span>
+<span class="payment-more" aria-label="More payment methods">+</span>
+</div>
+</div>
+<a class="btn primary" href="https://buy.stripe.com/5kQaEY0DTfpX9EY1y68IU00" target="_blank" rel="noopener noreferrer">Help Fund a Kit</a>
 </section>
 
 <section class="stats">
@@ -64,6 +87,6 @@
 </div>
 <div class="footer-bottom"><span>© 2026 SparkOn STEM</span><span>Designed by Christopher Alvarado</span></div>
 </footer>
-<script src="script.js?v=28"></script>
+<script src="script.js?v=30"></script>
 </body>
 </html>

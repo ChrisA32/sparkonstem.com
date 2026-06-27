@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SparkOn STEM | Contact</title>
 <script>try{if(sessionStorage.getItem("sparkonPageTransition")==="1"){document.documentElement.classList.add("transition-preload");document.documentElement.style.background="#ffc45c";}}catch(e){}</script>
-<link rel="stylesheet" href="styles.css?v=32">
+<link rel="stylesheet" href="styles.css?v=48">
 </head>
 <body>
 <section class="sponsor-strip">Now serving Easton, Redding, Monroe, Newtown, Fairfield, Trumbull, and Weston</section>
@@ -13,35 +13,78 @@
 <a class="logo" href="index.html" aria-label="SparkOn home"><img src="sparkon-logo.png?v=2" alt="SparkOn" width="354" height="354"></a>
 <button id="menuBtn" class="menu-btn" aria-label="Open navigation">☰</button>
 <nav id="navMenu">
-<a href="index.html">Home</a><a href="mission.html">Mission</a><a href="kits.html">Kits</a><a class="active" href="contact.html">Contact</a>
+<a href="index.html">Home</a><a href="mission.html">Mission</a><div class="nav-dropdown"><a href="kits.html" aria-haspopup="true">Kits</a><div class="dropdown-menu" aria-label="Kit pages"><a href="kits.html">Bristle Bot</a><a href="solar-car.html">Solar Powered Car</a></div></div><a class="active" href="contact.html">Contact</a>
 </nav>
 </header>
 <main>
 <section class="page-hero contact-hero">
 <p class="section-label">Contact SparkOn</p>
-<h1>Let’s create the next spark.</h1>
-<p>Request a kit, ask about a partnership, or tell us how you would like to get involved.</p>
+<h1>Let’s build something useful.</h1>
+<p>Ask about kits, partnerships, support, or ways to bring SparkOn to your community.</p>
 </section>
 <section class="support-section">
 <div>
 <p class="section-label">Support Our Mission</p>
 <h2>Help SparkOn reach more students.</h2>
-<p>Support helps us prepare more hands-on STEM kits, reach more local organizations, and make engineering feel approachable for young learners.</p>
+<p>Help cover materials, tools, and kit supplies so more students can experience STEM through building.</p>
 </div>
 <div class="support-card">
-<h3>Support SparkOn</h3>
-<p>Every contribution helps put hands-on STEM kits into more students’ hands. Your support helps cover materials, tools, batteries, motors, and the small parts that turn curiosity into a real working robot.</p>
-<!-- Stripe support embed placeholder: paste the Stripe-provided script/button code here. -->
-<button class="btn primary" type="button" disabled>Support link coming soon</button>
+<h3>Fuel the next build.</h3>
+<p>Your support helps turn simple parts—printed halves, batteries, motors, and instruction cards—into a memorable first build for a student.</p>
+<a class="btn primary" href="https://buy.stripe.com/5kQaEY0DTfpX9EY1y68IU00" target="_blank" rel="noopener noreferrer">Help Fund a Kit</a>
+<div class="payment-trust" aria-label="Secure checkout through Stripe with major payment methods">
+<span class="stripe-secure"><span>Powered by</span><strong>stripe</strong></span>
+<span class="payment-logo"><img src="payment-visa-compact.png?v=1" alt="Visa"></span>
+<span class="payment-logo"><img class="mastercard-logo" src="payment-mastercard-real.png?v=1" alt="Mastercard"></span>
+<span class="payment-logo"><img src="payment-amex-compact.png?v=1" alt="American Express"></span>
+<span class="payment-logo"><img src="payment-apple-pay-compact.png?v=1" alt="Apple Pay"></span>
+<span class="payment-more" aria-label="More payment methods">+</span>
+</div>
 </div>
 </section>
 <section class="contact-section page-contact">
+<div class="contact-form-header">
+<p class="section-label">Contact Us</p>
+<h2>Have a question or partnership idea?</h2>
+<p>Send a message about kits, local partnerships, or anything SparkOn-related.</p>
+</div>
 <form>
 <label>Name<input type="text" name="name" placeholder="Your name"></label>
 <label>Email<input type="email" name="email" placeholder="you@example.com"></label>
 <label>Message<textarea name="message" placeholder="How can we help?"></textarea></label>
 <button class="btn primary" type="submit">Send Message</button>
 </form>
+</section>
+<section class="faq-section">
+<div class="faq-intro">
+<p class="section-label">FAQ (Frequently Asked Questions)</p>
+</div>
+<div class="faq-list">
+<details>
+<summary>Who are SparkOn kits for?</summary>
+<p>They are designed for young learners who are ready to assemble a simple moving prototype and observe basic STEM ideas in action.</p>
+</details>
+<details>
+<summary>Can schools or organizations request kits?</summary>
+<p>Yes. SparkOn is focused on local community spaces, schools, clubs, and youth programs that want approachable STEM activities.</p>
+</details>
+<details>
+<summary>What does support help cover?</summary>
+<p>Support helps pay for kit materials like printed parts, CR2032 batteries, vibrating motors, instruction cards, and other prototype supplies.</p>
+</details>
+<details>
+<summary>Is SparkOn a registered nonprofit?</summary>
+<p>SparkOn is currently a community STEM project, not a registered nonprofit. That is why the site uses “support our mission” instead of calling payments donations.</p>
+</details>
+<details>
+<summary>Are contributions to SparkOn tax deductible?</summary>
+<p>As of now, no. Contributions to SparkOn are not tax deductible. That may change as SparkOn pursues proper registration within the state of Connecticut.</p>
+</details>
+<details>
+<summary>Where is SparkOn currently serving?</summary>
+<p>SparkOn is currently focused on Easton, Redding, Monroe, Newtown, Fairfield, Trumbull, and Weston.</p>
+</details>
+</div>
 </section>
 </main>
 <footer>
@@ -53,6 +96,6 @@
 </div>
 <div class="footer-bottom"><span>© 2026 SparkOn STEM</span><span>Designed by Christopher Alvarado</span></div>
 </footer>
-<script src="script.js?v=28"></script>
+<script src="script.js?v=30"></script>
 </body>
 </html>
