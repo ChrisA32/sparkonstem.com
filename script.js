@@ -107,8 +107,20 @@ const menuButton=document.querySelector("#menuBtn");
 const navigation=document.querySelector("#navMenu");
 
 if(menuButton&&navigation){
+menuButton.setAttribute("aria-expanded",navigation.classList.contains("open")?"true":"false");
 menuButton.addEventListener("click",()=>{
-navigation.classList.toggle("open");
+const isOpen=navigation.classList.toggle("open");
+menuButton.setAttribute("aria-expanded",isOpen?"true":"false");
+menuButton.setAttribute("aria-label",isOpen?"Close navigation":"Open navigation");
+});
+
+navigation.querySelectorAll("a").forEach(link=>{
+link.addEventListener("click",()=>{
+if(!navigation.classList.contains("open")) return;
+navigation.classList.remove("open");
+menuButton.setAttribute("aria-expanded","false");
+menuButton.setAttribute("aria-label","Open navigation");
+});
 });
 }
 };
@@ -119,6 +131,10 @@ const contactForm=document.querySelector(".page-contact form");
 if(contactForm){
 contactForm.addEventListener("submit",event=>{
 event.preventDefault();
+if(!contactForm.checkValidity()){
+contactForm.reportValidity();
+return;
+}
 const formData=new FormData(contactForm);
 const name=String(formData.get("name")||"").trim();
 const email=String(formData.get("email")||"").trim();
@@ -138,27 +154,35 @@ window.location.href=`mailto:contact@sparkonstem.com?subject=${subject}&body=${b
 const initKitModal=()=>{
 const openButtons=document.querySelectorAll("[data-modal-open]");
 const closeButtons=document.querySelectorAll("[data-modal-close]");
+let lastFocusedElement=null;
 
 const closeModal=modal=>{
 if(!modal) return;
 modal.classList.remove("is-open");
 modal.setAttribute("aria-hidden","true");
 document.body.classList.remove("modal-open");
+document.querySelectorAll(`[data-modal-open="${modal.id}"]`).forEach(button=>{
+button.setAttribute("aria-expanded","false");
+});
+if(lastFocusedElement&&typeof lastFocusedElement.focus==="function") lastFocusedElement.focus();
 };
 
-const openModal=modal=>{
+const openModal=(modal,trigger)=>{
 if(!modal) return;
+lastFocusedElement=trigger||document.activeElement;
 modal.classList.add("is-open");
 modal.setAttribute("aria-hidden","false");
 document.body.classList.add("modal-open");
+if(trigger) trigger.setAttribute("aria-expanded","true");
 const closeButton=modal.querySelector("[data-modal-close]");
 if(closeButton) closeButton.focus();
 };
 
 openButtons.forEach(button=>{
+button.setAttribute("aria-expanded","false");
 button.addEventListener("click",()=>{
 const modal=document.getElementById(button.dataset.modalOpen);
-openModal(modal);
+openModal(modal,button);
 });
 });
 

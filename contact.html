@@ -5,15 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SparkOn STEM | Contact</title>
 <script>try{if(sessionStorage.getItem("sparkonPageTransition")==="1"){document.documentElement.classList.add("transition-preload");document.documentElement.style.background="#ffc45c";}}catch(e){}</script>
-<link rel="stylesheet" href="styles.css?v=48">
+<link rel="icon" type="image/png" href="sparkon-icon.png?v=2">
+<link rel="apple-touch-icon" href="sparkon-icon.png?v=2">
+<link rel="stylesheet" href="styles.css?v=56">
 </head>
 <body>
 <section class="sponsor-strip">Now serving Easton, Redding, Monroe, Newtown, Fairfield, Trumbull, and Weston</section>
 <header class="navbar">
 <a class="logo" href="index.html" aria-label="SparkOn home"><img src="sparkon-logo.png?v=2" alt="SparkOn" width="354" height="354"></a>
-<button id="menuBtn" class="menu-btn" aria-label="Open navigation">☰</button>
+<button id="menuBtn" class="menu-btn" aria-label="Open navigation" aria-controls="navMenu" aria-expanded="false">☰</button>
 <nav id="navMenu">
-<a href="index.html">Home</a><a href="mission.html">Mission</a><div class="nav-dropdown"><a href="kits.html" aria-haspopup="true">Kits</a><div class="dropdown-menu" aria-label="Kit pages"><a href="kits.html">Bristle Bot</a><a href="solar-car.html">Solar Powered Car</a></div></div><a class="active" href="contact.html">Contact</a>
+<a href="index.html">Home</a><a href="mission.html">Mission</a><div class="nav-dropdown"><a href="kits.html" aria-haspopup="true">Kits</a><div class="dropdown-menu" aria-label="Kit pages"><a href="kits.html">Bristle Bot</a><a href="solar-car.html">Solar Powered Car</a></div></div><a class="active" href="contact.html">Contact</a><a class="nav-donate" href="https://buy.stripe.com/5kQaEY0DTfpX9EY1y68IU00" target="_blank" rel="noopener noreferrer">Donate</a>
 </nav>
 </header>
 <main>
@@ -49,9 +51,9 @@
 <p>Send a message about kits, local partnerships, or anything SparkOn-related.</p>
 </div>
 <form>
-<label>Name<input type="text" name="name" placeholder="Your name"></label>
-<label>Email<input type="email" name="email" placeholder="you@example.com"></label>
-<label>Message<textarea name="message" placeholder="How can we help?"></textarea></label>
+<label>Name<input type="text" name="name" placeholder="Your name" autocomplete="name" required></label>
+<label>Email<input type="email" name="email" placeholder="you@example.com" autocomplete="email" required></label>
+<label>Message<textarea name="message" placeholder="How can we help?" required></textarea></label>
 <button class="btn primary" type="submit">Send Message</button>
 </form>
 </section>
@@ -62,7 +64,7 @@
 <div class="faq-list">
 <details>
 <summary>Who are SparkOn kits for?</summary>
-<p>They are designed for young learners who are ready to assemble a simple moving prototype and observe basic STEM ideas in action.</p>
+<p>They are designed for young learners who are ready to assemble a simple moving robot and observe basic STEM ideas in action.</p>
 </details>
 <details>
 <summary>Can schools or organizations request kits?</summary>
@@ -70,7 +72,7 @@
 </details>
 <details>
 <summary>What does support help cover?</summary>
-<p>Support helps pay for kit materials like printed parts, CR2032 batteries, vibrating motors, instruction cards, and other prototype supplies.</p>
+<p>Support helps pay for kit materials like printed parts, CR2032 batteries, vibrating motors, instruction cards, and other build supplies.</p>
 </details>
 <details>
 <summary>Is SparkOn a registered nonprofit?</summary>
@@ -94,8 +96,8 @@
 <div class="footer-column"><h3>Contact</h3><a href="mailto:contact@sparkonstem.com?subject=SparkOn%20STEM%20Inquiry">contact@sparkonstem.com</a><a href="tel:+12034008414">203-400-8414</a></div>
 <div class="footer-column"><h3>Connect</h3><a class="footer-social" href="https://www.linkedin.com/company/sparkonstem/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><span class="linkedin-icon" aria-hidden="true">in</span><span>LinkedIn</span></a></div>
 </div>
-<div class="footer-bottom"><span>© 2026 SparkOn STEM</span><span>Designed by Christopher Alvarado</span></div>
+<div class="footer-bottom"><span>© 2026 SparkOn STEM</span><span>Located in Easton, CT</span><span>Designed by Christopher Alvarado</span></div>
 </footer>
-<script src="script.js?v=30"></script>
+<script src="script.js?v=31"></script>
 </body>
 </html>

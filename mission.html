@@ -5,36 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SparkOn STEM | Mission</title>
 <script>try{if(sessionStorage.getItem("sparkonPageTransition")==="1"){document.documentElement.classList.add("transition-preload");document.documentElement.style.background="#ffc45c";}}catch(e){}</script>
-<link rel="stylesheet" href="styles.css?v=48">
+<link rel="icon" type="image/png" href="sparkon-icon.png?v=2">
+<link rel="apple-touch-icon" href="sparkon-icon.png?v=2">
+<link rel="stylesheet" href="styles.css?v=56">
 </head>
 <body>
 <section class="sponsor-strip">Now serving Easton, Redding, Monroe, Newtown, Fairfield, Trumbull, and Weston</section>
 <header class="navbar">
 <a class="logo" href="index.html" aria-label="SparkOn home"><img src="sparkon-logo.png?v=2" alt="SparkOn" width="354" height="354"></a>
-<button id="menuBtn" class="menu-btn" aria-label="Open navigation">☰</button>
+<button id="menuBtn" class="menu-btn" aria-label="Open navigation" aria-controls="navMenu" aria-expanded="false">☰</button>
 <nav id="navMenu">
-<a href="index.html">Home</a><a class="active" href="mission.html">Mission</a><div class="nav-dropdown"><a href="kits.html" aria-haspopup="true">Kits</a><div class="dropdown-menu" aria-label="Kit pages"><a href="kits.html">Bristle Bot</a><a href="solar-car.html">Solar Powered Car</a></div></div><a href="contact.html">Contact</a>
+<a href="index.html">Home</a><a class="active" href="mission.html">Mission</a><div class="nav-dropdown"><a href="kits.html" aria-haspopup="true">Kits</a><div class="dropdown-menu" aria-label="Kit pages"><a href="kits.html">Bristle Bot</a><a href="solar-car.html">Solar Powered Car</a></div></div><a href="contact.html">Contact</a><a class="nav-donate" href="https://buy.stripe.com/5kQaEY0DTfpX9EY1y68IU00" target="_blank" rel="noopener noreferrer">Donate</a>
 </nav>
 </header>
 <main>
 <section class="page-hero">
 <p class="section-label">Our Mission</p>
-<h1>STEM that feels buildable.</h1>
-<p>SparkOn turns simple robot builds into hands-on projects students can assemble, observe, and understand.</p>
+<h1>STEM access starts with a spark.</h1>
+<p>SparkOn helps more students discover STEM through approachable hands-on projects that build curiosity, awareness, and confidence.</p>
 </section>
-<section class="grid-section page-content">
-<div><h2>Curiosity becomes confidence.</h2><p>Students learn by assembling something real and seeing how each part contributes to movement. The goal is to make engineering feel visible, approachable, and connected to something they can hold.</p></div>
-<div class="image-placeholder">Mission image coming soon</div>
+<section class="mission-focus page-content">
+<div class="mission-focus-copy">
+<p class="section-label">Why SparkOn Exists</p>
+<h2>Curiosity becomes confidence.</h2>
+<p>Students learn by assembling something real and seeing how each part contributes to motion. SparkOn is built to increase access, awareness, and early interest in STEM through projects students can actually hold.</p>
+</div>
+<div class="mission-sparks" aria-label="SparkOn mission focus areas">
+<article><span>01</span><h3>Access</h3><p>Bring approachable STEM experiences to more students and local programs.</p></article>
+<article><span>02</span><h3>Awareness</h3><p>Help students recognize engineering ideas inside simple everyday builds.</p></article>
+<article><span>03</span><h3>Interest</h3><p>Create a first spark that can grow into deeper curiosity about STEM.</p></article>
+</div>
 </section>
 <section class="founder-section">
-<div class="founder-photo" aria-label="Christopher Alvarado founder photo placeholder">Founder photo coming soon</div>
+<figure class="founder-photo founder-photo-real">
+<picture>
+<source srcset="founder-christopher-alvarado.webp?v=2" type="image/webp">
+<img src="founder-christopher-alvarado.jpg?v=2" alt="Christopher Alvarado, founder of SparkOn" loading="lazy">
+</picture>
+</figure>
 <div class="founder-copy">
-<p class="section-label">Founder</p>
+<p class="section-label">Founder, Joel Barlow High School</p>
 <h2>Christopher Alvarado</h2>
-<p class="founder-title">Founder of SparkOn • Rising senior at Joel Barlow High School</p>
 <p>After moving across three different school districts, I noticed the same pattern in each place: students are curious about building and technology, but meaningful engineering opportunities are not always easy to find.</p>
 <p>As a robotics member at Joel Barlow High School, a rising senior, and a student living in Easton, CT, I wanted to create something practical, local, and expandable. SparkOn is my way of helping more students experience engineering through projects they can assemble, understand, and remember.</p>
 <p>My goal is to keep expanding SparkOn so more schools, organizations, and communities can give young learners an early spark for STEM.</p>
+<a class="founder-link" href="https://www.linkedin.com/in/christopher-alvarado-987a2b41a/" target="_blank" rel="noopener noreferrer"><span class="linkedin-icon" aria-hidden="true">in</span><span>Connect with Christopher</span></a>
 </div>
 </section>
 </main>
@@ -45,8 +60,8 @@
 <div class="footer-column"><h3>Contact</h3><a href="mailto:contact@sparkonstem.com?subject=SparkOn%20STEM%20Inquiry">contact@sparkonstem.com</a><a href="tel:+12034008414">203-400-8414</a></div>
 <div class="footer-column"><h3>Connect</h3><a class="footer-social" href="https://www.linkedin.com/company/sparkonstem/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><span class="linkedin-icon" aria-hidden="true">in</span><span>LinkedIn</span></a></div>
 </div>
-<div class="footer-bottom"><span>© 2026 SparkOn STEM</span><span>Designed by Christopher Alvarado</span></div>
+<div class="footer-bottom"><span>© 2026 SparkOn STEM</span><span>Located in Easton, CT</span><span>Designed by Christopher Alvarado</span></div>
 </footer>
-<script src="script.js?v=30"></script>
+<script src="script.js?v=31"></script>
 </body>
 </html>
