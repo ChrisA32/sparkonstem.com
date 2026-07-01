@@ -62,6 +62,8 @@ const revealSelectors=[
 ".stats > div",
 ".page-hero > *",
 ".grid-section > *",
+".mission-focus > *",
+".mission-sparks article",
 ".founder-section > *",
 ".kit-feature > *",
 ".learning-section > *",
@@ -92,7 +94,7 @@ const staggerGroup=item.closest(".page-cards,.stats,.instruction-steps,.learning
 const delay=staggerGroup?Math.min(siblingIndex,5)*140:0;
 item.classList.add("reveal");
 if(item.matches("main > section")) item.classList.add("reveal-section");
-else if(item.matches(".page-card,.stats > div,.instruction-step,.learning-grid article")) item.classList.add("reveal-pop");
+else if(item.matches(".page-card,.stats > div,.instruction-step,.learning-grid article,.mission-sparks article")) item.classList.add("reveal-pop");
 else item.classList.add("reveal-child");
 item.style.setProperty("--reveal-delay",`${delay}ms`);
 revealObserver.observe(item);

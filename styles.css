@@ -1863,19 +1863,3 @@ border-radius:22px;
 .step-photo img{height:230px;}
 .footer-main{grid-template-columns:1fr;}
 }
-
-@media (prefers-reduced-motion:reduce){
-*,
-*::before,
-*::after{
-animation-duration:.01ms!important;
-animation-iteration-count:1!important;
-scroll-behavior:auto!important;
-transition-duration:.01ms!important;
-}
-.reveal{
-opacity:1!important;
-transform:none!important;
-filter:none!important;
-}
-}
